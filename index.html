@@ -54,17 +54,17 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Security</a></li>
+            <li><a href="#security">Security</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
         <a class="button" href="#">Buy now</a>
       </div>
     </header>
-    <section class="content-container text-image" id="part1">
+    <section class="content-container text-image" id="home">
       <div class="text-area one-colored right-space">
         <h2>
-          <span>A melhor forma</span> <br />
+          <span>A melhor forma</span>
           de proteger seu dinheiro
         </h2>
         <p>
@@ -243,7 +243,7 @@
         />
       </svg>
     </section>
-    <section class="content-container text-image" id="part2">
+    <section class="content-container text-image" id="security">
       <img src="./images/bitcoin.svg" alt="" />
       <div class="text-area one-colored left-space">
         <h2>Tranquilidade e <span>segurança</span></h2>
@@ -257,7 +257,9 @@
         </p>
       </div>
     </section>
+    <section class="content-container"></section>
     <script>
+      console.log(window.MediaQueryList)
       window.addEventListener('scroll', () => {
         const header = document.querySelector('header')
         header.classList.toggle('sticky', window.scrollY > 0)
