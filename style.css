@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -15,8 +16,8 @@
 }
 
 .content-container {
-  max-width: 1140px;
-  width: 85%;
+  max-width: 1213px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,7 +61,7 @@
 }
 
 .nav-bar nav ul li {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .nav-bar nav ul li:first-child {
@@ -105,6 +106,7 @@ header {
 
 .sticky {
   background: #fff;
+  z-index: 20;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
@@ -125,14 +127,18 @@ header {
   align-items: center;
 }
 
-#part1 {
+#home {
   margin-top: 125px;
 }
 
-#part2 img {
+#security {
+  padding-top: 125px;
+}
+
+#security img {
   max-width: 600px;
   width: 50%;
-  height: 600px;
+  height: 400px;
 }
 
 .text-area {
@@ -160,4 +166,97 @@ header {
 
 .right-space {
   margin-right: 100px;
+}
+
+#experts {
+  padding-top: 125px;
+  margin-top: 15px;
+  margin-bottom: 300px;
+}
+
+.header-experts {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-experts h2 {
+  color: #6c63ff;
+  font-size: 1.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 1.125rem;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card .img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.card .img-1 {
+  background-image: url('./images/homem1.jpg');
+  background-position-x: 340px;
+  background-position-y: -15px;
+}
+
+.card .img-2 {
+  background-image: url('./images/homem3.jpg');
+  background-position-x: 250px;
+  background-position-y: -30px;
+}
+
+.card .img-3 {
+  background-image: url('./images/homem2.jpg');
+  background-position-x: 325px;
+  background-position-y: -5px;
+}
+
+.card p {
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 20px;
+}
+
+.card h3 {
+  font-weight: 900;
+  font-size: 1rem;
+  color: #6c63ff;
+}
+
+.hamburger {
+  visibility: hidden;
+  display: none;
+}
+
+.show {
+  visibility: visible;
+  display: inline;
+}
+
+@media (max-width: 1000px) {
+  #home {
+    flex-direction: column-reverse;
+  }
 }

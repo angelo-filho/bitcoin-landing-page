@@ -55,10 +55,12 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#security">Security</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#experts">Experts</a></li>
+            <li><a href="#experts">Contact</a></li>
           </ul>
         </nav>
         <a class="button" href="#">Buy now</a>
+        <h2 class="hamburger">=</h2>
       </div>
     </header>
     <section class="content-container text-image" id="home">
@@ -257,9 +259,53 @@
         </p>
       </div>
     </section>
-    <section class="content-container"></section>
+    <section class="content-container" id="experts">
+      <div class="header-experts">
+        <h2>Quem compra não se arrepende</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit quae
+          asperiores provident
+        </p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="img img-1"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nisi
+            quo vel odit maiores nihil veniam, ex vitae consequuntur iure
+            officiis dolore perferendis voluptatem autem dolores, quasi placeat
+            sunt ipsum
+          </p>
+          <h3>Alguém importante</h3>
+        </div>
+        <div class="card">
+          <div class="img img-2"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nisi
+            quo vel odit maiores nihil veniam, ex vitae consequuntur iure
+            officiis dolore perferendis voluptatem autem dolores, quasi placeat
+            sunt ipsum
+          </p>
+          <h3>Alguém importante</h3>
+        </div>
+        <div class="card">
+          <div class="img img-3"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nisi
+            quo vel odit maiores nihil veniam, ex vitae consequuntur iure
+            officiis dolore perferendis voluptatem autem dolores, quasi placeat
+            sunt ipsum
+          </p>
+          <h3>Alguém importante</h3>
+        </div>
+      </div>
+    </section>
     <script>
-      console.log(window.MediaQueryList)
+      console.log(window.innerWidth)
+      window.addEventListener('resize', () => {
+        const hamburger = document.querySelector('.hamburger')
+        hamburger.classList.toggle('show', window.innerWidth <= 1000)
+      })
       window.addEventListener('scroll', () => {
         const header = document.querySelector('header')
         header.classList.toggle('sticky', window.scrollY > 0)
