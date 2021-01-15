@@ -9,7 +9,7 @@
   <body>
     <header class="container">
       <div class="content-container nav-bar">
-        <a id="logo" href="#" color="#6C63FF">
+        <a id="logo" href="#">
           <svg
             version="1.1"
             id="Capa_1"
@@ -55,12 +55,12 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#security">Security</a></li>
-            <li><a href="#experts">Experts</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <a class="button" href="#">Buy now</a>
-        <h2 class="hamburger">=</h2>
+        <!-- <h2 class="hamburger">=</h2> -->
       </div>
     </header>
     <section class="content-container text-image" id="home">
@@ -259,8 +259,8 @@
         </p>
       </div>
     </section>
-    <section class="content-container" id="experts">
-      <div class="header-experts">
+    <section class="content-container" id="testimonials">
+      <div class="header-testimonials">
         <h2>Quem compra não se arrepende</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit quae
@@ -300,16 +300,58 @@
         </div>
       </div>
     </section>
+    <section class="content-container one-colored" id="contact">
+      <div class="header-contact">
+        <h2>Contate<span>-nos</span></h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
+          inventore.
+        </p>
+      </div>
+      <div class="contact-form">
+        <h3>Mande uma mensagem</h3>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Nome" />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-box">
+            <textarea name="message" placeholder="Mensagem"></textarea>
+          </div>
+          <div class="input-box">
+            <button class="button">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>
+        Copyright 2021
+        <a target="blank" href="https://github.com/angelo-filho">Angelo Filho</a
+        >. All right Reserved
+      </p>
+    </footer>
     <script>
-      console.log(window.innerWidth)
-      window.addEventListener('resize', () => {
-        const hamburger = document.querySelector('.hamburger')
-        hamburger.classList.toggle('show', window.innerWidth <= 1000)
-      })
       window.addEventListener('scroll', () => {
         const header = document.querySelector('header')
         header.classList.toggle('sticky', window.scrollY > 0)
       })
+
+      // window.addEventListener('resize', () => {
+      //   const hamburger = document.querySelector('.hamburger')
+      //   hamburger.classList.toggle('show', window.innerWidth <= 1000)
+      // })
+
+      // let ham = document.querySelector('.hamburger')
+      // ham.onclick = () => {
+      //   ham.classList.toggle('rotate')
+      // }
+
+      // if (window.innerWidth < 1000) {
+      //   ham.classList.toggle('show')
+      // }
     </script>
   </body>
 </html>
