@@ -18,8 +18,23 @@
 .content-container {
   max-width: 1213px;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
 }
 
 .nav-bar {
@@ -82,7 +97,7 @@
   background: #000;
 }
 
-.button {
+#button {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -93,21 +108,15 @@
   transition: 0.2s;
 }
 
-.button:hover {
-  background: #fff;
+#button:hover {
+  background: none;
   color: #6c63ff;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  transition: 0.5s;
 }
 
 .sticky {
   background: #fff;
   z-index: 20;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 }
 
@@ -121,22 +130,72 @@ header {
   color: #000;
 }
 
-.text-image {
+.sticky .hamburger {
+  background-image: url(images/hamburger-purple.svg);
+}
+
+.sticky .rotate {
+  background-image: url(images/x-purple.svg);
+}
+/* Menu */
+.hamburger {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(images/hamburger.svg);
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transition: 0.3s;
+}
+
+.show {
+  display: block;
+}
+
+.rotate {
+  background-image: url(images/x.svg);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+nav.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-#home {
-  margin-top: 125px;
+nav.menu ul {
+  flex-direction: column;
 }
 
-#security {
-  padding-top: 125px;
+nav.menu ul li {
+  margin: 0;
+  margin-top: 2rem;
+}
+
+nav.menu ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Home and Security */
+#home img {
+  width: 55%;
 }
 
 #security img {
-  max-width: 600px;
   width: 50%;
   height: 400px;
 }
@@ -169,8 +228,8 @@ header {
 }
 
 #testimonials {
-  padding-top: 125px;
-  margin-top: 15px;
+  flex-direction: column;
+  padding-top: 7rem;
 }
 
 .header-testimonials {
@@ -245,21 +304,9 @@ header {
   color: #6c63ff;
 }
 
-.hamburger {
-  visibility: hidden;
-  display: none;
-}
-
-.show {
-  visibility: visible;
-  display: inline;
-}
-
 #contact {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 125px;
+  padding-top: 4rem;
 }
 
 #contact .header-contact {
@@ -309,4 +356,54 @@ footer a {
   text-decoration: none;
   font-weight: 500;
   color: #6c63ff;
+}
+
+@media screen and (max-width: 1000px) {
+  #home,
+  #security {
+    padding-top: 6rem;
+  }
+
+  #home {
+    flex-direction: column;
+  }
+
+  #home img {
+    width: 80%;
+  }
+
+  #security {
+    flex-direction: column-reverse;
+  }
+
+  #security img {
+    width: 100%;
+  }
+
+  .text-area {
+    margin: 0;
+    width: 100%;
+
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #home,
+  #security {
+    padding-top: 2.5rem;
+  }
+
+  #security img {
+    width: 90%;
+  }
+
+  #security .text-area {
+    padding: 0;
+  }
+
+  .text-area h2 {
+    font-size: 2rem;
+  }
 }
