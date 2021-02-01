@@ -97,6 +97,21 @@ header {
   background: #000;
 }
 
+.button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 10px 30px;
+  border: 1px solid #6c63ff;
+  background: #6c63ff;
+  transition: 0.2s;
+}
+.button:hover {
+  background: none;
+  color: #6c63ff;
+}
+
 #button {
   color: #fff;
   text-decoration: none;
@@ -144,6 +159,7 @@ header {
   background-image: url(images/hamburger.svg);
   background-size: cover;
   background-position: center;
+  cursor: pointer;
   display: none;
   transition: 0.3s;
 }
